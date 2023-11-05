@@ -1,0 +1,73 @@
+/*====General=====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1920' height='1070' preserveAspectRatio='none' viewBox='0 0 1920 1070'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1039%26quot%3b)' fill='none'%3e%3crect width='1920' height='1070' x='0' y='0' fill='rgba(81%2c 46%2c 95%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c427.913C82.022%2c417.177%2c160.183%2c400.919%2c235.066%2c365.769C319.678%2c326.052%2c417.285%2c293.063%2c462.066%2c211.018C507.544%2c127.695%2c495.57%2c24.059%2c471.726%2c-67.824C449.455%2c-153.645%2c381.697%2c-214.357%2c332.532%2c-288.141C274.971%2c-374.526%2c257.127%2c-507.306%2c158.112%2c-538.48C59.412%2c-569.555%2c-26.634%2c-457.643%2c-127.096%2c-432.85C-234.299%2c-406.393%2c-364.037%2c-459.707%2c-448.632%2c-388.742C-533.516%2c-317.534%2c-546.61%2c-189.704%2c-548.987%2c-78.932C-551.196%2c24.001%2c-509.631%2c119.747%2c-461.495%2c210.758C-415.681%2c297.378%2c-366.91%2c391.237%2c-278.245%2c432.958C-192.574%2c473.27%2c-93.88%2c440.201%2c0%2c427.913' fill='%2341254c'%3e%3c/path%3e%3cpath d='M1920 1885.663C2083.508 1932.133 2284.956 1950.6860000000001 2417.949 1844.8229999999999 2551.424 1738.576 2532.381 1533.501 2571.13 1367.3609999999999 2602.163 1234.3029999999999 2627.799 1105.5529999999999 2622.209 969.038 2616.057 818.784 2620.875 660.171 2537.061 535.314 2448.968 404.082 2310.929 293.28999999999996 2154.31 272.01199999999994 2002.426 251.37699999999995 1881.344 396.745 1730.84 425.779 1556.396 459.43100000000004 1321.775 316.658 1209.432 454.289 1095.742 593.5699999999999 1279.124 798.206 1280.087 977.994 1280.851 1120.676 1153.6219999999998 1263.146 1214.4569999999999 1392.211 1275.33 1521.357 1458.8600000000001 1523.6680000000001 1575.858 1605.495 1699.581 1692.0259999999998 1774.771 1844.388 1920 1885.663' fill='%23613772'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1039'%3e%3crect width='1920' height='1070' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+}
+
+/*====CSS=====*/
+.main-btn {
+  height: 97.7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-btn button {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  background: royalblue;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.7em 1em;
+  padding-left: 0.9em;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.main-btn button span {
+  display: block;
+  margin-left: 0.3em;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-btn button svg {
+  display: block;
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-btn button:hover {
+  background-color: #2bb741;
+}
+
+.main-btn button:hover .svg-wrapper {
+  animation: fly-1 0.6s ease-in-out infinite alternate;
+}
+
+.main-btn button:hover svg {
+  transform: translateX(1.2em) rotate(45deg) scale(1.1);
+}
+
+.main-btn button:hover span {
+  transform: translateX(5em);
+}
+
+.main-btn button:active {
+  transform: scale(0.95);
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+
+  to {
+    transform: translateY(-0.1em);
+  }
+}
